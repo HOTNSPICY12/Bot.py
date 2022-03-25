@@ -1,0 +1,6 @@
+requests
+gtts
+threading
+amino.fix==2.2.5
+time
+clear
