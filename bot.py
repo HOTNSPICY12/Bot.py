@@ -1,4 +1,3 @@
-from keep_alive import keep_alive
 import os
 import random
 from os import system
@@ -17,7 +16,6 @@ client=aminofix.Client()
 os.system("clear")
 os.system("pip install amino.fix==2.2.5")
 print("\t\033[1;32m Alexa1.0  \033[1;36m Community Bot \n\n")
-keep_alive()
 email="gky06b@oosln.com"
 password="prince"
 client.login(email=email,password=password)
