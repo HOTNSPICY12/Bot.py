@@ -10,6 +10,11 @@ from time import sleep
 import threading
 import aminofix
 import time
+from aminofix.lib.util.helpers import update_deviceId
+
+# Updating the device ID with this function will not result in
+#  a verification request if verification has not been requested before.
+print(update_deviceId("32793AC06B0951E88F42D6211418B24D018BE40C56EA96D903188973062AEB9D8E6EA876C38BE975A3"))
 from gtts import gTTS
 from uuid import uuid4
 client=aminofix.Client()
