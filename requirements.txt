@@ -1,5 +1,4 @@
 requests
 gtts
-time
 amino.fix==2.2.7
 Json_minify
