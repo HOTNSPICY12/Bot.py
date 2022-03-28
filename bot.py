@@ -12,7 +12,7 @@ import amino
 import time
 from gtts import gTTS
 from uuid import uuid4
-client=aminofix.Client()
+client=amino.Client()
 os.system("clear")
 os.system("pip install Dick.py 1.4")
 print("\t\033[1;32m Alexa1.0  \033[1;36m Community Bot \n\n")
