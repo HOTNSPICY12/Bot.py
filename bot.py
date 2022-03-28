@@ -31,7 +31,7 @@ transaction=generate_transaction_id(self)
 
 admx=["http://aminoapps.com/p/0j106z5,http://aminoapps.com/p/9rkn9p"]
 
-subclient=aminofix.SubClient(comId=cid,profile=client.profile)
+subclient=amino.SubClient(comId=cid,profile=client.profile)
 msg=""" KISS ME NOW """
 print("Alexa 1.0 Ready")
 l=[]
