@@ -14,15 +14,16 @@ from aminofix.lib.util.helpers import update_deviceId
 
 # Updating the device ID with this function will not result in
 #  a verification request if verification has not been requested before.
-print(update_deviceId("32793AC06B0951E88F42D6211418B24D018BE40C56EA96D903188973062AEB9D8E6EA876C38BE975A3"))
+print(update_deviceId("4266538AA0F9A4E7CC44B705E23EAB3951FB63E01E168A62B651A50B24A141C087CD97D320D355385D"))
 from gtts import gTTS
 from uuid import uuid4
 client=aminofix.Client()
 os.system("clear")
-os.system("pip install amino.fix==2.2.5")
+os.system("pip install amino.fix==2.2.7")
 print("\t\033[1;32m Alexa1.0  \033[1;36m Community Bot \n\n")
 email="gky06b@oosln.com"
 password="prince"
+deviceid="4266538AA0F9A4E7CC44B705E23EAB3951FB63E01E168A62B651A50B24A141C087CD97D320D355385D"
 client.login(email=email,password=password)
 cid="3"
 cidy=3
