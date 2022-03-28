@@ -8,18 +8,13 @@ import argparse
 from urllib.request import urlopen
 from time import sleep
 import threading
-import aminofix
+import amino
 import time
-from aminofix.lib.util.helpers import update_deviceId
-
-# Updating the device ID with this function will not result in
-#  a verification request if verification has not been requested before.
-print(update_deviceId("4266538AA0F9A4E7CC44B705E23EAB3951FB63E01E168A62B651A50B24A141C087CD97D320D355385D"))
 from gtts import gTTS
 from uuid import uuid4
 client=aminofix.Client()
 os.system("clear")
-os.system("pip install amino.fix==2.2.7")
+os.system("pip install Dick.py 1.4")
 print("\t\033[1;32m Alexa1.0  \033[1;36m Community Bot \n\n")
 email="gky06b@oosln.com"
 password="prince"
