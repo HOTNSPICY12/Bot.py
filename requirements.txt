@@ -1,4 +1,4 @@
 requests
 gtts
-Dick.py==1.4
+samino==1.9.6
 Json_minify
