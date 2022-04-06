@@ -8,16 +8,16 @@ import argparse
 from urllib.request import urlopen
 from time import sleep
 import threading
-import amino
+import samino
 import time
 from gtts import gTTS
 from uuid import uuid4
-client=amino.Client()
+client=samino.Client()
 os.system("clear")
-os.system("pip install Dick.py 1.4")
+os.system("pip install samino 1.9.6")
 print("\t\033[1;32m Alexa1.0  \033[1;36m Community Bot \n\n")
-email="gky06b@oosln.com"
-password="prince"
+email="gobid71459@yeafam.com"
+password="pewdiepie"
 deviceid="4266538AA0F9A4E7CC44B705E23EAB3951FB63E01E168A62B651A50B24A141C087CD97D320D355385D"
 client.login(email=email,password=password)
 cid="3"
@@ -31,7 +31,7 @@ transaction=generate_transaction_id(self)
 
 admx=["http://aminoapps.com/p/0j106z5,http://aminoapps.com/p/9rkn9p"]
 
-subclient=amino.SubClient(comId=cid,profile=client.profile)
+subclient=samino.SubClient(comId=cid,profile=client.profile)
 msg=""" KISS ME NOW """
 print("Alexa 1.0 Ready")
 l=[]
