@@ -1,4 +1,4 @@
 requests
 gtts
-samino==1.9.6
+samino
 Json_minify
