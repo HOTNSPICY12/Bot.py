@@ -16,7 +16,7 @@ client=amino.Client()
 os.system("clear")
 os.system("pip install -U dick.py")
 print("\t\033[1;32m Alexa1.0  \033[1;36m Community Bot \n\n")
-email="nbkqekg738up@vddaz.com"
+email="5elue3gh9p0n@1secmail.net"
 password="Techvision"
 deviceid="4266538AA0F9A4E7CC44B705E23EAB3951FB63E01E168A62B651A50B24A141C087CD97D320D355385D"
 client.login(email=email,password=password)
