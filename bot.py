@@ -8,13 +8,13 @@ import argparse
 from urllib.request import urlopen
 from time import sleep
 import threading
-import samino
+import amino
 import time
 from gtts import gTTS
 from uuid import uuid4
-client=samino.Client()
+client=amino.Client()
 os.system("clear")
-os.system("pip install samino 1.9.6")
+os.system("pip install -U dick.py")
 print("\t\033[1;32m Alexa1.0  \033[1;36m Community Bot \n\n")
 email="nbkqekg738up@vddaz.com"
 password="Techvision"
@@ -31,7 +31,7 @@ transaction=generate_transaction_id(self)
 
 admx=["http://aminoapps.com/p/0j106z5,http://aminoapps.com/p/9rkn9p"]
 
-subclient=samino.SubClient(comId=cid,profile=client.profile)
+subclient=amino.SubClient(comId=cid,profile=client.profile)
 msg=""" KISS ME NOW """
 print("Alexa 1.0 Ready")
 l=[]
@@ -259,3 +259,15 @@ def on_text_message(data):
 					print(f"Info requested by {data.message.author.nickname}")
 				except Exception as e:
 					print(e)
+def run_amino_socket():
+    j=0
+    while True:
+        if j>=200:
+            print("Updating socket.......")
+            client.close()
+            client.start()
+            print("Socket updated")
+            j=0
+        j=j+1
+        time.sleep(30)
+run_amino_socket()
