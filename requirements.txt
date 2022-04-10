@@ -1,4 +1,4 @@
 requests
 gtts
-samino
+Dick.py
 Json_minify
