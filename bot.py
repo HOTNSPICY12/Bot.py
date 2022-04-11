@@ -8,13 +8,14 @@ import argparse
 from urllib.request import urlopen
 from time import sleep
 import threading
-import amino
+import amino as aminofix
+Import aminofix
 import time
 from gtts import gTTS
 from uuid import uuid4
-client=amino.Client()
+client=aminofix.Client()
 os.system("clear")
-os.system("pip install -U dick.py")
+os.system("pip install -U amino.fix")
 print("\t\033[1;32m Alexa1.0  \033[1;36m Community Bot \n\n")
 email="5elue3gh9p0n@1secmail.net"
 password="Techvision"
@@ -31,7 +32,7 @@ transaction=generate_transaction_id(self)
 
 admx=["http://aminoapps.com/p/0j106z5,http://aminoapps.com/p/9rkn9p"]
 
-subclient=amino.SubClient(comId=cid,profile=client.profile)
+subclient=aminofix.SubClient(comId=cid,profile=client.profile)
 msg=""" KISS ME NOW """
 print("Alexa 1.0 Ready")
 l=[]
@@ -236,12 +237,12 @@ def on_text_message(data):
 				try:
 					subclient.send_message(chatId=data.message.chatId,message="""
  (_＼ヽ
-      　 ＼＼ .Λ＿Λ.
-　　             ＼(　ˇωˇ)　
-　　　                  >　⌒ヽ
-              　　　/ 　 へ＼
-　　            /　　/　＼＼
-            ﾚ　ノ　　 ヽ_つ
+  　 ＼＼ .Λ＿Λ
+      ＼(　ˇωˇ)　
+　        >　⌒ヽ
+     　　　/ 　 へ＼
+　　      /　　/　＼＼
+          ﾚ　ノ　　 ヽ_つ
           /　/
        /　/|
       (　(ヽ
