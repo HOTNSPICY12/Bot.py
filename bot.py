@@ -9,7 +9,6 @@ from urllib.request import urlopen
 from time import sleep
 import threading
 import amino as aminofix
-Import aminofix
 import time
 from gtts import gTTS
 from uuid import uuid4
