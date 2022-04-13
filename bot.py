@@ -16,10 +16,22 @@ client=aminofix.Client()
 os.system("clear")
 os.system("pip install -U amino.fix")
 print("\t\033[1;32m Alexa1.0  \033[1;36m Community Bot \n\n")
-email="ctnyznx0@yoggm.com"
-password="#PROUDCATOWNER"
-deviceid="4266538AA0F9A4E7CC44B705E23EAB3951FB63E01E168A62B651A50B24A141C087CD97D320D355385D"
-client.login(email=email,password=password)
+email = "ctnyznx0@yoggm.com"
+password = "#PROUDCATOWNER"
+deviceID = "4266538AA0F9A4E7CC44B705E23EAB3951FB63E01E168A62B651A50B24A141C087CD97D320D355385D"
+with open("proxies.txt", "r") as f:
+    proxies = f.readlines()
+for proxy in proxies:
+    proxies = {
+        "http": proxy,
+        "https": proxy
+    }
+    try:
+        client = aminofix.Client(deviceID, proxies = proxies)
+        client.login(email, password)
+        print(client.sid)
+    except Exception as e:
+        print(e)
 cid="3"
 cidy=3
 
@@ -259,7 +271,7 @@ def on_text_message(data):
 					print(f"Info requested by {data.message.author.nickname}")
 				except Exception as e:
 					print(e)
-def run_amino_socket():
+def run_aminofix_socket():
     j=0
     while True:
         if j>=200:
@@ -270,4 +282,4 @@ def run_amino_socket():
             j=0
         j=j+1
         time.sleep(30)
-run_amino_socket()
+run_aminofix_socket()
