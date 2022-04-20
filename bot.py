@@ -8,32 +8,22 @@ import argparse
 from urllib.request import urlopen
 from time import sleep
 import threading
-import aminofix
+system("pip install gtts")
+system("pip install requests")
+import amino
 import time
 from gtts import gTTS
+import requests
 from uuid import uuid4
-client=aminofix.Client()
+client = amino.Client()
+email="nbkqekg738up@vddaz.com"
+password="Techvision"
+client.login(email=email,password=password)
 os.system("clear")
-os.system("pip install -U amino.fix")
-print("\t\033[1;32m Alexa1.0  \033[1;36m Community Bot \n\n")
-email = "ctnyznx0@yoggm.com"
-password = "#PROUDCATOWNER"
-deviceID = "4266538AA0F9A4E7CC44B705E23EAB3951FB63E01E168A62B651A50B24A141C087CD97D320D355385D"
-with open("proxies.txt", "r") as f:
-    proxies = f.readlines()
-for proxy in proxies:
-    proxies = {
-        "http": proxy,
-        "https": proxy
-    }
-    try:
-        client = aminofix.Client(deviceID, proxies = proxies)
-        client.login(email, password)
-        print(client.sid)
-    except Exception as e:
-        print(e)
-cid="3"
-cidy=3
+os.system("pip install -U amino.py")
+print("\t\033[1;32m Scarlett  \033[1;36m Community Bot \n\n")
+cid="30061290"
+cidy=30061290
 
 adm=[]
 self=client.socket
@@ -43,9 +33,9 @@ transaction=generate_transaction_id(self)
 
 admx=["http://aminoapps.com/p/0j106z5,http://aminoapps.com/p/9rkn9p"]
 
-subclient=aminofix.SubClient(comId=cid,profile=client.profile)
+subclient=amino.SubClient(comId=cid,profile=client.profile)
 msg=""" KISS ME NOW """
-print("Alexa 1.0 Ready")
+print("Scarlett 1.0 Ready")
 l=[]
 lis = ["It is certain",
     "It is decidedly so",
@@ -84,6 +74,14 @@ def on_group_member_join(data):
 			print(f"\nwelcomed {data.message.author.nickname} to gc ")
 		except Exception as e:
 			print(e)
+@client.event(".c")
+def c(data):
+    link = f"http://api.brainshop.ai/get?bid=153868&key=rcKonOgrUFmn5usX&uid=1&msg={data.message}"
+    response = requests.get(link)
+    json_data = json.loads(response.text)
+    chatbot = json_data["cnt"]
+    data.subClient.send_message(chatId=data.chatId, message=f"{chatbot}", replyTo=data.messageId)
+    print(f"\nChatBot working {data.message.author.nickname} to gc ")
 @client.event("on_text_message")
 def on_text_message(data):
 	if data.comId==cidy:
@@ -113,7 +111,7 @@ def on_text_message(data):
 								print(e)
 			if x.lower()=="?info" and c==[]:
 				try:
-					subclient.send_message(chatId=data.message.chatId,message="[ci]Hey there i m a communtiy Bot and my name is alexa , Kwel's bot                            admin link : http://aminoapps.com/p/9rkn9p 👈 for contact ")
+					subclient.send_message(chatId=data.message.chatId,message="[ci]Hey there i m a communtiy Bot and my name is Scarlett , Kwel's bot                            admin link : http://aminoapps.com/p/9rkn9p 👈 for contact ")
 					print(f"Info requested by {data.message.author.nickname}")
 				except Exception as e:
 					print(e)
@@ -215,7 +213,7 @@ def on_text_message(data):
 							lx='en'
 							for i in c:
 								t=t+i
-							out=gTTS(text=t,lang=lx,tld='co.in',slow=False)
+							out=gTTS(text=t,lang=lx,tld='co.in',faster=False)
 							out.save("soundfx.mp3")
 							with open("soundfx.mp3","rb") as f:
 								subclient.send_message(chatId=data.message.chatId,file=f,fileType="audio")
@@ -247,31 +245,31 @@ def on_text_message(data):
 			if x.lower()=="?dance" and c==[]:
 				try:
 					subclient.send_message(chatId=data.message.chatId,message="""
- (_＼ヽ
-  　 ＼＼ .Λ＿Λ
-      ＼(　ˇωˇ)　
-　        >　⌒ヽ
-     　　　/ 　 へ＼
-　　      /　　/　＼＼
-          ﾚ　ノ　　 ヽ_つ
-          /　/
-       /　/|
-      (　(ヽ
- 　     |　|、＼
-       | 丿 ＼ ⌒)
-        | |　　) /
-      `ノ ) 　 Lﾉ
-    (_／""")
+[c] (_＼ヽ
+[c]　 ＼＼ .Λ＿Λ.
+[c]　　 ＼(　ˇωˇ)　
+[c]　　　 >　⌒ヽ
+[c]　　　/ 　 へ＼
+[c]　　 /　　/　＼＼
+[c]　　 ﾚ　ノ　　 ヽ_つ
+[c]　　/　/
+[c]　 /　/|
+[c]　(　(ヽ
+[c] 　|　|、＼
+[c] 　| 丿 ＼ ⌒)
+[c]　 | |　　) /
+[c] `ノ ) 　 Lﾉ
+[c] (_／""")
 					print(f"Info requested by {data.message.author.nickname}")
 				except Exception as e:
 					print(e)
 			if x.lower()=="?help" and c==[]:
 				try:
-					subclient.send_message(chatId=data.message.chatId,message=f"[cb] ?check       - ?startvc         - ?endlive            - ?say               - ?love            - ?dance           - ?qa            - ?info            <${data.message.author.nickname}$> !!",mentionUserIds=[data.message.author.userId])
+					subclient.send_message(chatId=data.message.chatId,message=f"[cb]?check       - ?startvc         - ?endlive            - ?say               - ?love            - ?dance           - ?qa            - ?info            <${data.message.author.nickname}$> !!",mentionUserIds=[data.message.author.userId])
 					print(f"Info requested by {data.message.author.nickname}")
 				except Exception as e:
 					print(e)
-def run_aminofix_socket():
+def run_amino_socket():
     j=0
     while True:
         if j>=200:
@@ -282,4 +280,4 @@ def run_aminofix_socket():
             j=0
         j=j+1
         time.sleep(30)
-run_aminofix_socket()
+run_amino_socket()
