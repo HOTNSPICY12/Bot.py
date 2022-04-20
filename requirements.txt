@@ -1,4 +1,4 @@
 requests
 gtts
-Amino.fix==2.3.3.2
+amino.py
 Json_minify
